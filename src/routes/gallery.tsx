@@ -10,12 +10,6 @@ type Filter = 'all' | GalleryCategory
 
 const filters: Filter[] = ['all', 'exterior', 'interior', 'facilities']
 
-const tintClass: Record<'sand-200' | 'sand-300' | 'sand-400', string> = {
-  'sand-200': 'bg-sand-200',
-  'sand-300': 'bg-sand-300',
-  'sand-400': 'bg-sand-400',
-}
-
 export function Gallery() {
   const { t } = useTranslation()
   const [filter, setFilter] = useState<Filter>('all')
@@ -28,9 +22,9 @@ export function Gallery() {
 
   const lightboxImages = visible.map((item) => ({
     id: item.id,
-    caption: t(`galleryPage.captions.${item.captionKey}`),
-    aspect: item.aspect,
-    tint: item.tint,
+    src: item.image,
+    // Invisible alt for accessibility only (no visible captions on the site).
+    alt: t(`galleryPage.filters.${item.category}`),
   }))
 
   return (
@@ -73,16 +67,15 @@ export function Gallery() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: (index % 6) * 0.05 }}
-            className="group block w-full break-inside-avoid overflow-hidden rounded-sm text-left"
-            aria-label={t(`galleryPage.captions.${item.captionKey}`)}
+            className="group block w-full break-inside-avoid overflow-hidden rounded-sm bg-sand-200"
+            aria-label={t(`galleryPage.filters.${item.category}`)}
           >
-            <div className={cn('ph-image w-full', item.aspect, tintClass[item.tint])}>
-              <div className="flex h-full items-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="relative z-1 rounded-full bg-sand-50/85 px-3 py-1.5 text-xs font-medium text-ink-700 backdrop-blur-sm">
-                  {t(`galleryPage.captions.${item.captionKey}`)}
-                </span>
-              </div>
-            </div>
+            <img
+              src={item.image}
+              alt={t(`galleryPage.filters.${item.category}`)}
+              loading="lazy"
+              className="block h-auto w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+            />
           </motion.button>
         ))}
       </div>

@@ -27,11 +27,18 @@ export function ApartmentCard({ apartment, index }: ApartmentCardProps) {
       transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
     >
       <Link to={localePath(locale, `apartments/${apartment.slug}`)} className="group block">
-        <div className={`ph-image aspect-[4/5] w-full overflow-hidden rounded-sm ${tints[index % tints.length]}`}>
-          <div className="flex h-full items-end justify-between p-4">
-            <span className="rounded-full bg-sand-50/85 px-2.5 py-1 text-xs font-medium text-ink-700 backdrop-blur-sm">
-              {apartment.number}
-            </span>
+        <div className={`ph-image relative aspect-square w-full overflow-hidden rounded-sm ${tints[index % tints.length]}`}>
+          <img
+            src={apartment.image}
+            alt={t(`apartments.types.${apartment.nameKey}.name`)}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover"
+            onError={(event) => {
+              // Gracefully fall back to the gradient placeholder if the file is missing.
+              event.currentTarget.style.display = 'none'
+            }}
+          />
+          <div className="relative flex h-full items-start justify-end p-4">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink-900 text-sand-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <ArrowUpRight size={16} strokeWidth={1.5} />
             </span>

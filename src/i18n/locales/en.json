@@ -259,24 +259,6 @@
       "interior": "Interior",
       "facilities": "Facilities"
     },
-    "captions": {
-      "exterior1": "Facade · evening light",
-      "exterior2": "South elevation",
-      "exterior3": "Approach from Kacharava street",
-      "exterior4": "Rooftop garden",
-      "exterior5": "Ground floor terrace",
-      "interior1": "Living room · two-bedroom A",
-      "interior2": "Kitchen detail",
-      "interior3": "Bathroom · honed travertine",
-      "interior4": "Bedroom · sea-facing window",
-      "interior5": "Entry hall",
-      "interior6": "Studio overview",
-      "facilities1": "Indoor pool",
-      "facilities2": "Spa pool",
-      "facilities3": "Gym",
-      "facilities4": "Yoga deck",
-      "facilities5": "Library & workspace"
-    },
     "close": "Close image"
   },
   "notFound": {

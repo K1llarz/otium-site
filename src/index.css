@@ -12,6 +12,7 @@
   --color-ink-700: #2A2A2A;
   --color-ink-900: #0A0A0A;
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', 'Noto Serif Georgian', Georgia, 'Times New Roman', serif;
   --tracking-tightest: -0.04em;
 }
 
@@ -130,6 +131,26 @@ body {
   background: color-mix(in oklab, var(--color-sand-50) 8%, transparent);
 }
 
+@utility btn-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-sand-50);
+  color: var(--color-ink-900);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+.btn-light:hover {
+  background: var(--color-sand-200);
+}
+.btn-light:active {
+  transform: scale(0.98);
+}
+
 @utility eyebrow {
   font-size: 0.6875rem;
   font-weight: 500;
@@ -139,9 +160,10 @@ body {
 }
 
 @utility display {
+  font-family: var(--font-serif);
   font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  letter-spacing: -0.01em;
+  line-height: 1.04;
   color: var(--color-ink-900);
 }
 

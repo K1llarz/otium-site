@@ -2,12 +2,13 @@ import type { ReactNode } from 'react'
 import { Link } from 'react-router'
 import { cn } from '../../lib/cn'
 
-type Variant = 'primary' | 'outline' | 'ghost'
+type Variant = 'primary' | 'outline' | 'ghost' | 'light'
 
 const variantClass: Record<Variant, string> = {
   primary: 'btn-primary',
   outline: 'btn-outline',
   ghost: 'btn-ghost',
+  light: 'btn-light',
 }
 
 interface BaseProps {

@@ -1,9 +1,12 @@
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'motion/react'
 import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { X } from 'lucide-react'
 import { LanguageSwitcher } from './language-switcher'
+import { Logo } from './logo'
+import { useLocale, localePath } from '../../hooks/use-locale'
 
 export interface NavItem {
   to: string
@@ -18,6 +21,7 @@ interface MobileMenuProps {
 
 export function MobileMenu({ open, onClose, items }: MobileMenuProps) {
   const { t } = useTranslation()
+  const locale = useLocale()
 
   useEffect(() => {
     if (!open) return
@@ -33,7 +37,10 @@ export function MobileMenu({ open, onClose, items }: MobileMenuProps) {
     }
   }, [open, onClose])
 
-  return (
+  // Rendered through a portal to <body> so it escapes the sticky header's
+  // backdrop-filter, which otherwise becomes the containing block for these
+  // position:fixed layers and clips the drawer to the header's height.
+  return createPortal(
     <AnimatePresence>
       {open && (
         <>
@@ -46,7 +53,7 @@ export function MobileMenu({ open, onClose, items }: MobileMenuProps) {
             onClick={onClose}
           />
           <motion.aside
-            className="fixed right-0 top-0 z-50 flex h-full w-[82%] max-w-sm flex-col bg-sand-50 px-6 py-6 md:hidden"
+            className="fixed right-0 top-0 z-50 flex h-dvh w-[82%] max-w-sm flex-col bg-sand-50 px-6 py-6 md:hidden"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -56,7 +63,9 @@ export function MobileMenu({ open, onClose, items }: MobileMenuProps) {
             aria-label={t('nav.menu')}
           >
             <div className="flex items-center justify-between">
-              <span className="text-lg font-medium tracking-tightest text-ink-900">Reverance</span>
+              <Link to={localePath(locale)} onClick={onClose} aria-label="Reverance — home">
+                <Logo size="sm" />
+              </Link>
               <button
                 type="button"
                 onClick={onClose}
@@ -87,6 +96,7 @@ export function MobileMenu({ open, onClose, items }: MobileMenuProps) {
           </motion.aside>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   )
 }

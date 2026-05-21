@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '../components/ui/button'
+import { Logo } from '../components/layout/logo'
 import { useLocale, localePath } from '../hooks/use-locale'
 
 export function NotFound() {
@@ -11,8 +12,8 @@ export function NotFound() {
   return (
     <div className="flex min-h-dvh flex-col bg-sand-50">
       <header className="container-page flex h-16 items-center md:h-20">
-        <Link to={localePath(locale)} className="text-lg font-medium tracking-tightest text-ink-900 md:text-xl">
-          Reverance<span className="text-bronze">.</span>
+        <Link to={localePath(locale)} aria-label="Reverance — home">
+          <Logo size="sm" />
         </Link>
       </header>
 

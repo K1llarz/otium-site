@@ -55,7 +55,7 @@ export function InvestmentBlock() {
             <p className="eyebrow text-bronze">[ 02 ] {t('investmentBlock.sectionLabel')}</p>
           </div>
           <div className="flex-1">
-            <h2 className="max-w-2xl text-[clamp(1.75rem,4vw,3rem)] font-medium leading-tight tracking-tightest">
+            <h2 className="max-w-2xl font-serif text-[clamp(1.75rem,4vw,3rem)] font-medium leading-tight tracking-[-0.015em]">
               {t('investmentBlock.headline')}
             </h2>
 

@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { Instagram, Facebook, Linkedin, Youtube, MessageCircle } from 'lucide-react'
 import { useLocale, localePath } from '../../hooks/use-locale'
+import { Logo } from './logo'
 
 const socials = [
   { label: 'Instagram', href: 'https://instagram.com', Icon: Instagram },
@@ -21,12 +22,8 @@ export function Footer() {
       <div className="container-page py-16 md:py-24">
         <div className="grid gap-12 md:grid-cols-2">
           <div>
-            <Link
-              to={localePath(locale)}
-              className="display text-5xl md:text-7xl"
-              aria-label="Reverance — home"
-            >
-              Reverance<span className="text-bronze">.</span>
+            <Link to={localePath(locale)} className="inline-block" aria-label="Reverance — home">
+              <Logo size="lg" />
             </Link>
             <p className="mt-6 max-w-xs text-sm text-ink-500">{t('footer.tagline')}</p>
           </div>

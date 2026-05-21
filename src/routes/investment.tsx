@@ -118,7 +118,7 @@ function RoiCalculator() {
             <p className="eyebrow text-bronze">[ 02 ] {t('investmentPage.calculator.sectionLabel')}</p>
           </div>
           <div className="flex-1">
-            <h2 className="max-w-xl text-[clamp(1.75rem,4vw,3rem)] font-medium leading-tight tracking-tightest">
+            <h2 className="max-w-xl font-serif text-[clamp(1.75rem,4vw,3rem)] font-medium leading-tight tracking-[-0.015em]">
               {t('investmentPage.calculator.headline')}
             </h2>
             <p className="mt-5 max-w-md text-sm text-sand-200/70">

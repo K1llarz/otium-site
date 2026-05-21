@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import { Menu } from 'lucide-react'
 import { useLocale, localePath } from '../../hooks/use-locale'
+import { Logo } from './logo'
 import { LanguageSwitcher } from './language-switcher'
 import { MobileMenu, type NavItem } from './mobile-menu'
 import { cn } from '../../lib/cn'
@@ -23,12 +24,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 hairline-b bg-sand-50/80 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
-        <Link
-          to={localePath(locale)}
-          className="text-lg font-medium tracking-tightest text-ink-900 md:text-xl"
-          aria-label="Reverance — home"
-        >
-          Reverance<span className="text-bronze">.</span>
+        <Link to={localePath(locale)} className="shrink-0" aria-label="Reverance — home">
+          <Logo size="sm" />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">

@@ -40,7 +40,16 @@ export function ApartmentDetail() {
 
       <div className="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-16">
         <figure>
-          <div className="ph-image aspect-[3/4] w-full rounded-sm bg-sand-300" />
+          <div className="ph-image relative aspect-square w-full overflow-hidden rounded-sm bg-sand-300">
+            <img
+              src={apartment.image}
+              alt={t(`apartments.types.${apartment.nameKey}.name`)}
+              className="absolute inset-0 h-full w-full object-cover"
+              onError={(event) => {
+                event.currentTarget.style.display = 'none'
+              }}
+            />
+          </div>
           <figcaption className="mt-3 text-xs text-bronze">{t('apartmentDetail.floorPlanCaption')}</figcaption>
         </figure>
 

@@ -4,15 +4,9 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface LightboxImage {
   id: string
-  caption: string
-  aspect: string
-  tint: 'sand-200' | 'sand-300' | 'sand-400'
-}
-
-const tintClass: Record<LightboxImage['tint'], string> = {
-  'sand-200': 'bg-sand-200',
-  'sand-300': 'bg-sand-300',
-  'sand-400': 'bg-sand-400',
+  src: string
+  /** Accessibility label only — not rendered as a visible caption. */
+  alt: string
 }
 
 interface LightboxProps {
@@ -59,7 +53,7 @@ export function Lightbox({ images, index, onClose, onNavigate, closeLabel }: Lig
           onClick={onClose}
           role="dialog"
           aria-modal="true"
-          aria-label={current.caption}
+          aria-label={current.alt}
         >
           <button
             type="button"
@@ -97,18 +91,17 @@ export function Lightbox({ images, index, onClose, onNavigate, closeLabel }: Lig
             </>
           )}
 
-          <motion.figure
+          <motion.img
             key={current.id}
-            className="flex max-h-full w-full max-w-3xl flex-col gap-3"
+            src={current.src}
+            alt={current.alt}
+            className="max-h-[85vh] w-auto max-w-full rounded-sm object-contain"
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.96 }}
             transition={{ duration: 0.25 }}
             onClick={(event) => event.stopPropagation()}
-          >
-            <div className={`ph-image w-full ${current.aspect} ${tintClass[current.tint]} max-h-[75vh] rounded-sm`} />
-            <figcaption className="text-center text-sm text-sand-200">{current.caption}</figcaption>
-          </motion.figure>
+          />
         </motion.div>
       )}
     </AnimatePresence>
