@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand-50: #F5F3EF;
+  --color-sand-100: #EFEBE2;
+  --color-sand-200: #E8DFCD;
+  --color-sand-300: #DFD4BB;
+  --color-sand-400: #C4B8A0;
+  --color-bronze: #8A8578;
+  --color-bronze-dark: #6B6453;
+  --color-ink-500: #4A4A4A;
+  --color-ink-700: #2A2A2A;
+  --color-ink-900: #0A0A0A;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --tracking-tightest: -0.04em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-sand-50);
+  color: var(--color-ink-500);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-ink-900);
+  color: var(--color-sand-50);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink-900);
+  outline-offset: 2px;
+}
+
+@utility container-page {
+  margin-inline: auto;
+  max-width: 1400px;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility hairline {
+  border: 0 solid color-mix(in oklab, var(--color-ink-900) 10%, transparent);
+}
+
+@utility hairline-t {
+  border-top: 1px solid color-mix(in oklab, var(--color-ink-900) 10%, transparent);
+}
+
+@utility hairline-b {
+  border-bottom: 1px solid color-mix(in oklab, var(--color-ink-900) 10%, transparent);
+}
+
+@utility hairline-y {
+  border-top: 1px solid color-mix(in oklab, var(--color-ink-900) 10%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--color-ink-900) 10%, transparent);
+}
+
+@utility hairline-r {
+  border-right: 1px solid color-mix(in oklab, var(--color-ink-900) 10%, transparent);
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-ink-900);
+  color: var(--color-sand-50);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+.btn-primary:hover {
+  background: var(--color-ink-700);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+@utility btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--color-ink-900);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1px solid color-mix(in oklab, var(--color-ink-900) 20%, transparent);
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+.btn-outline:hover {
+  background: color-mix(in oklab, var(--color-ink-900) 4%, transparent);
+  border-color: color-mix(in oklab, var(--color-ink-900) 40%, transparent);
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--color-sand-50);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1px solid color-mix(in oklab, var(--color-sand-50) 30%, transparent);
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+.btn-ghost:hover {
+  background: color-mix(in oklab, var(--color-sand-50) 8%, transparent);
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-bronze);
+}
+
+@utility display {
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--color-ink-900);
+}
+
+@utility ph-image {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    var(--color-sand-300) 0%,
+    var(--color-sand-400) 60%,
+    var(--color-bronze) 100%
+  );
+}
+.ph-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 30% 20%, color-mix(in oklab, white 18%, transparent) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, color-mix(in oklab, var(--color-ink-900) 12%, transparent) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+@utility marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

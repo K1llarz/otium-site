@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "title": "Reverance by Otium — Batumi residences",
+    "description": "A premium residential complex on Batumi's Black Sea coast."
+  },
+  "nav": {
+    "residences": "Residences",
+    "investment": "Investment",
+    "gallery": "Gallery",
+    "location": "Location",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close menu"
+  },
+  "language": {
+    "label": "Language",
+    "ka": "KA",
+    "en": "EN",
+    "ru": "RU",
+    "switch": "Switch language",
+    "native": {
+      "ka": "ქართული",
+      "en": "English",
+      "ru": "Русский"
+    }
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "viewDetails": "View details",
+    "requestInformation": "Request information",
+    "send": "Send message",
+    "loading": "Loading…",
+    "from": "From",
+    "currency": "$",
+    "metric": {
+      "sqm": "m²",
+      "min": "min"
+    }
+  },
+  "hero": {
+    "eyebrow": "Reverance · Batumi · 2026",
+    "headline": {
+      "line1": "Live",
+      "line2": "between",
+      "line3": "sea and",
+      "line4": "silence."
+    },
+    "subhead": "A premium residential complex on Batumi's coast — measured architecture, considered amenities, and one of Europe's most rewarding investment markets.",
+    "ctaPrimary": "Explore residences",
+    "ctaSecondary": "Investment case",
+    "imageCaption": "Reverance — Anatoli Kacharava 5"
+  },
+  "stats": {
+    "residences": "42 residences",
+    "typologies": "5 typologies",
+    "boulevard": "5 min to the boulevard",
+    "roi": "12–15% annual ROI",
+    "tax": "0% purchase tax"
+  },
+  "about": {
+    "sectionLabel": "About",
+    "headline": "Not a building. A way of living that prefers presence over performance.",
+    "p1": "Reverance occupies one of Batumi's most considered districts — where the new boulevard meets the residential calm of Kacharava. The architecture is restrained, the materials are honest, and every residence is composed around natural light and the sea.",
+    "p2": "Designed by Otium Development, the complex brings together a thoughtful set of amenities — pools, spa, gym, library, yoga deck — without ever feeling busy. The default state is quiet."
+  },
+  "investmentBlock": {
+    "sectionLabel": "Investment",
+    "headline": "Batumi is, quietly, one of Europe's strongest yield markets.",
+    "stats": {
+      "roi": {
+        "value": "12–15%",
+        "label": "Estimated annual ROI"
+      },
+      "occupancy": {
+        "value": "70%",
+        "label": "Average rental occupancy"
+      },
+      "rentalTax": {
+        "value": "5%",
+        "label": "Rental income tax"
+      },
+      "purchaseTax": {
+        "value": "0%",
+        "label": "Purchase tax for foreign buyers"
+      }
+    },
+    "citation": "Top 10 European investment destination in 2023 — European Best Destinations",
+    "cta": "Read the investment case"
+  },
+  "apartments": {
+    "sectionLabel": "Residences",
+    "headline": "Five compositions, five ways to live.",
+    "subhead": "From compact studios to two-bedroom residences with sea-facing balconies — each typology is composed around light, view, and proportion.",
+    "cta": "View all residences",
+    "types": {
+      "studio": {
+        "name": "Studio",
+        "description": "A compact, well-proportioned studio with a south-facing balcony and an efficient open plan — ideal for short-stay rentals or a quiet pied-à-terre."
+      },
+      "oneBedroomA": {
+        "name": "One-bedroom · A",
+        "description": "A measured one-bedroom layout with a clear separation between living and rest, and a balcony oriented toward the boulevard."
+      },
+      "oneBedroomB": {
+        "name": "One-bedroom · B",
+        "description": "A slightly larger one-bedroom variant with a wider living room and an additional storage zone — calm, functional, sea-facing."
+      },
+      "twoBedroomA": {
+        "name": "Two-bedroom · A",
+        "description": "A two-bedroom residence for a small family or a long-stay guest — two full bathrooms, a private balcony, and quiet circulation."
+      },
+      "twoBedroomB": {
+        "name": "Two-bedroom · B",
+        "description": "The most generous typology — a corner two-bedroom with an extended balcony and the most open sea view in the building."
+      }
+    },
+    "specs": {
+      "area": "Area",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "balcony": "Balcony",
+      "priceFrom": "Price from"
+    }
+  },
+  "amenities": {
+    "sectionLabel": "Amenities",
+    "headline": "A complete way of living, on a single site.",
+    "items": {
+      "indoorPool": "Indoor pool",
+      "outdoorPool": "Outdoor pool",
+      "spa": "Spa & sauna",
+      "gym": "Gym",
+      "yoga": "Yoga deck",
+      "library": "Library & workspace",
+      "children": "Children's area",
+      "solar": "Solar panels",
+      "paths": "Walking & cycling paths"
+    }
+  },
+  "location": {
+    "sectionLabel": "Location",
+    "headline": "Five minutes from the new boulevard. Seven from the airport.",
+    "places": {
+      "boulevard": "New Boulevard",
+      "shopping": "Shopping Center",
+      "medical": "Batumi Medical Center",
+      "stadium": "Batumi Stadium",
+      "airport": "Batumi International Airport"
+    }
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "headline": "Begin the conversation.",
+    "subhead": "Send us a note. We will reply within one business day.",
+    "address": "Anatoli Kacharava 5, Batumi",
+    "phone": "+995 32 2 11 11 04",
+    "email": "info@otium.ge",
+    "hours": "10:00 — 18:00",
+    "labels": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours"
+    },
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send message",
+      "success": "Thank you. We will reply within one business day.",
+      "error": "Something went wrong. Please try again.",
+      "errors": {
+        "firstName": "Please enter your first name.",
+        "lastName": "Please enter your last name.",
+        "email": "Please enter a valid email address.",
+        "message": "Please write a short message."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "A property by Otium Development",
+    "rights": "All rights reserved",
+    "developer": "Developer",
+    "follow": "Follow",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "apartmentsPage": {
+    "sectionLabel": "Residences",
+    "headline": "Every residence in the building.",
+    "subhead": "Five typologies. Two-hundred-and-ten possible configurations. Choose by area, view, or price."
+  },
+  "apartmentDetail": {
+    "back": "Back to residences",
+    "overview": "Overview",
+    "specifications": "Specifications",
+    "floorPlanCaption": "Indicative floor plan",
+    "interestedHeadline": "Interested in this residence?",
+    "interestedBody": "We will walk you through the floor plan, the view, and the purchase process."
+  },
+  "investmentPage": {
+    "hero": {
+      "sectionLabel": "Investment",
+      "headline": "A measured investment in a market still mid-cycle.",
+      "subhead": "Batumi has the rare combination of low entry prices, strong tourism growth, and one of Europe's most favourable tax frameworks for foreign buyers.",
+      "cta": "Speak to our investment team"
+    },
+    "whyBatumi": {
+      "sectionLabel": "Why Batumi",
+      "headline": "Four reasons the numbers work.",
+      "reasons": {
+        "growth": {
+          "title": "A tourism economy compounding fast",
+          "body": "Visitor numbers have roughly doubled in five years. Short-stay rental demand follows the same curve."
+        },
+        "tax": {
+          "title": "One of Europe's lightest tax frameworks",
+          "body": "No purchase tax for non-residents. Five percent flat tax on rental income. No annual property tax up to a generous threshold."
+        },
+        "entry": {
+          "title": "Entry prices still well below the Mediterranean",
+          "body": "Beachfront residences in Batumi trade at a fraction of comparable Spanish, Italian, or Cypriot stock."
+        },
+        "operator": {
+          "title": "Hands-off rental operation",
+          "body": "Otium offers an in-house rental management programme. Owners receive monthly statements and quarterly payouts."
+        }
+      }
+    },
+    "calculator": {
+      "sectionLabel": "Calculator",
+      "headline": "Estimate your annual return.",
+      "subhead": "A simple estimate using the headline numbers. Speak to us for a residence-specific projection.",
+      "labels": {
+        "price": "Apartment price",
+        "occupancy": "Annual occupancy",
+        "nightlyRate": "Average nightly rate",
+        "result": "Estimated annual income",
+        "yield": "Estimated gross yield"
+      },
+      "disclaimer": "Indicative figures. Actual returns vary with season, typology, and rental strategy."
+    },
+    "cta": {
+      "headline": "Ready to look at the numbers in detail?",
+      "body": "We will prepare a one-page projection for the residence you are considering.",
+      "button": "Request a projection"
+    }
+  },
+  "galleryPage": {
+    "sectionLabel": "Gallery",
+    "headline": "The building, in detail.",
+    "filters": {
+      "all": "All",
+      "exterior": "Exterior",
+      "interior": "Interior",
+      "facilities": "Facilities"
+    },
+    "captions": {
+      "exterior1": "Facade · evening light",
+      "exterior2": "South elevation",
+      "exterior3": "Approach from Kacharava street",
+      "exterior4": "Rooftop garden",
+      "exterior5": "Ground floor terrace",
+      "interior1": "Living room · two-bedroom A",
+      "interior2": "Kitchen detail",
+      "interior3": "Bathroom · honed travertine",
+      "interior4": "Bedroom · sea-facing window",
+      "interior5": "Entry hall",
+      "interior6": "Studio overview",
+      "facilities1": "Indoor pool",
+      "facilities2": "Spa pool",
+      "facilities3": "Gym",
+      "facilities4": "Yoga deck",
+      "facilities5": "Library & workspace"
+    },
+    "close": "Close image"
+  },
+  "notFound": {
+    "code": "404",
+    "headline": "This page is between sea and silence.",
+    "body": "The page you are looking for does not exist. Return to the home page to continue.",
+    "cta": "Return home"
+  }
+}
